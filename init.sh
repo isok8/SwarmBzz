@@ -38,7 +38,7 @@ cd /home
 mkdir -p bee && cd bee
 
 
-wget -q https://raw.githubusercontent.com/luzhongyun/SwarmBzz/main/docker-compose.yml
+wget -q https://raw.githubusercontent.com/isok8/SwarmBzz/main/docker-compose.yml
 
 wget -q https://raw.githubusercontent.com/luzhongyun/SwarmBzz/main/.env
 
@@ -47,11 +47,7 @@ echo ${name}
 sed -i "s/47.88.85.249/${name}/g" docker-compose.yml
 sed -i "s/47.88.85.249/${name}/g" .env
 
-docker-compose up -d bee-1 bee-2 bee-3 bee-4 bee-5 bee-6
-sleep 3m
-docker-compose up -d bee-7 bee-8 bee-9 bee-10 bee-11 bee-12
-sleep 3m
-docker-compose up -d bee-13 bee-14 bee-15 bee-16 
+docker-compose up -d bee-1 bee-2 bee-3 bee-4
 sleep 3m
 curl -sLf https://raw.githubusercontent.com/luzhongyun/SwarmBzz/main/watch.sh | bash
 
